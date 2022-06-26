@@ -7,6 +7,9 @@
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
+CREATE DATABASE dbClinica;
+USE dbClinica;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -46,11 +49,13 @@ CREATE TABLE `tbpaciente` (
   `nomePaciente` varchar(200) NOT NULL,
   `cpfPaciente` char(14) NOT NULL,
   `rgPaciente` char(13) NOT NULL,
-  `dataNasc` datetime NOT NULL,
+  `dataNasc` date NOT NULL,
   `emailPaciente` varchar(200) DEFAULT NULL,
-  `telefonePaciente` char(13) DEFAULT NULL,
-  `celPaciente` char(12) NOT NULL
+  `telefonePaciente` char(14) DEFAULT NULL,
+  `celPaciente` char(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
 
 -- --------------------------------------------------------
 
@@ -61,7 +66,7 @@ CREATE TABLE `tbpaciente` (
 CREATE TABLE `tbprofissional` (
   `idProfissional` int(11) NOT NULL,
   `cpfProfissional` char(14) NOT NULL,
-  `rgProfissional` char(10) NOT NULL,
+  `rgProfissional` char(13) NOT NULL,
   `nomeProfissional` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -118,11 +123,12 @@ ALTER TABLE `tbprofissional`
 --
 -- Limitadores para a tabela `tbagenda`
 --
+/*
 ALTER TABLE `tbagenda`
   ADD CONSTRAINT `tbagenda_ibfk_1` FOREIGN KEY (`idProfissional`) REFERENCES `tbprofissional` (`idProfissional`),
   ADD CONSTRAINT `tbagenda_ibfk_2` FOREIGN KEY (`idPaciente`) REFERENCES `tbpaciente` (`idPaciente`);
 COMMIT;
-
+*/
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

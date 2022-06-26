@@ -1,0 +1,205 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Roboto:wght@100;300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+option:checked { 
+    box-shadow: 0 0 10px 100px #000 inset;
+}
+
+@media only screen and (min-width: 600px) {
+    .sidebar {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 260px;
+    }
+
+    .sidebar.close {
+        width: 78px;
+    }
+
+    .sidebar.close ~ .home-section {
+        left: 78px;
+        width: calc(100% - 78px);
+    }
+
+    .sidebar .logo-details {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .home-section {
+        position: relative;
+        height: 100vh;
+        left: 260px;
+        width: calc(100% - 260px);
+        transition: all 0.5s ease;
+    }
+
+    .sidebar .nav-links li i {
+        height: 50px;
+        min-width: 78px;
+        text-align: center;
+        padding-right: 10px;
+        line-height: 50px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .home-section .home-content {
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .sidebar {
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 78px;
+    }
+
+    .sidebar.close {
+        width: 0px;
+    }
+
+    .sidebar .logo-details .logo_name {
+        display: none;
+    }
+
+    .sidebar .nav-links .link_name {
+        display: none;
+    }
+
+    .home-section {
+        position: relative;
+        height: 100vh;
+        left: 78px;
+        width: calc(100% - 78px);
+        transition: all 0.5s ease;
+    }
+
+    .sidebar ~ .home-section {
+        left: 78px;
+        width: calc(100% - 78px);
+    }
+    .sidebar.close ~ .home-section {
+        left: 0;
+        width: 100vw;
+    }
+
+    .sidebar .nav-links li i {
+        height: 55px;
+        min-width: 78px;
+        text-align: center;
+        padding-right: 10px;
+        line-height: 50px;
+        color: white;
+        font-size: 26px;
+    }
+
+    .home-section {
+        width: 100vw;
+    }
+
+    .home-section .home-content {
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    background: #a29c9c;
+    transition: all 0.5s ease;
+}
+
+.sidebar .logo-details i {
+    font-size: 30px;
+    color: #fff;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.sidebar .logo-details .logo_name {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.sidebar .nav-links {
+    height: 100%;
+    padding-top: 30px;
+    padding-left: 4px;
+}
+
+.sidebar .nav-links li {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover {
+    background: #3c1f85;
+}
+
+.get-margin {
+    margin: 10px auto 20px auto;
+}
+
+.sidebar .nav-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar .nav-links li a .link_name {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+
+.sidebar .nav-links li .logout {
+    position: relative;
+    display: flex;
+    list-style: none;
+    float: inline-end;
+}
+
+.sidebar .nav-links li .logout:hover {
+    background: #3c1f85;
+}
+
+.home-section .home-content .bx-menu {
+    color: #1d0066;
+    font-size: 35px;
+    margin: 0 15px;
+}
+
+.btn-custom {
+    background: #1d0066;
+    color: white;
+}
+
+.favicon-sidebar {
+    margin: auto 20px auto 20px;
+}
+
+
+.logo_object{
+    text-decoration: none;
+}
